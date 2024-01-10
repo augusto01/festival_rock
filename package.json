@@ -1,0 +1,23 @@
+{
+  "name": "festival_rock",
+  "version": "1.0.0",
+  "description": "proyecto con gulp y sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augusto01/festival_rock.git"
+  },
+  "keywords": [
+    "SASS",
+    "GULP"
+  ],
+  "author": "Almiron Pedro Augusto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/augusto01/festival_rock/issues"
+  },
+  "homepage": "https://github.com/augusto01/festival_rock#readme"
+}
