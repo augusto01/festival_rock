@@ -4,7 +4,8 @@
   "description": "proyecto con gulp y sass",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/scss:build/css",
+    "primerTarea": "gulp primerTarea"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/augusto01/festival_rock/issues"
   },
-  "homepage": "https://github.com/augusto01/festival_rock#readme"
+  "homepage": "https://github.com/augusto01/festival_rock#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.7"
+  }
 }
