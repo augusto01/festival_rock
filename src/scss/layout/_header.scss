@@ -1,0 +1,38 @@
+@use '../base/variable' as v; 
+@use '../base/mixins' as mixin;
+
+.header{
+    background-color: v.$aqua;
+
+    h1{
+        color: v.$blanco;
+    }
+}
+
+.navegacion-principal 
+{
+    @include mixin.telefono{
+    }
+        a{
+            color: v.$blanco;
+            font-size: 2.4rem;
+            &:hover {
+                color: v.$amarillo;
+            }   
+        }
+    
+        @include mixin.tablet{
+        }
+
+        @include mixin.desktop{
+          
+        }
+
+        @include mixin.desktopXL{
+        }
+}
+
+.prueba{
+    @include mixin.heading_morado(v.$morado); //un mixin es un pedazo de codigo que puedes reutlizarlo en cualquier archivo, es parecido a una funcion
+
+}

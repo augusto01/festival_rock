@@ -1,3 +1,7 @@
+body {
+  background-color: #FEF46D;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -307,10 +311,74 @@ template {
   display: none;
 }
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: #FEF46D;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 2rem;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 h1 {
   color: #f53756;
+}
+
+.header {
+  background-color: #4CB8B3;
+}
+.header h1 {
+  color: #ffffff;
+}
+
+.navegacion-principal a {
+  color: #ffffff;
+  font-size: 2.4rem;
+}
+.navegacion-principal a:hover {
+  color: #FEF46D;
+}
+.prueba {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: #752F97;
+  letter-spacing: 10px;
 }
