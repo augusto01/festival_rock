@@ -3,22 +3,53 @@
 
 .header{
     background-color: v.$aqua;
+    text-align: center;
 
     h1{
         color: v.$blanco;
+        
+    }
+
+    .contenido-header{
+        @include mixin.tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            h1{
+                margin: 0px;
+            }
+        }
+        
     }
 }
 
 .navegacion-principal 
 {
     @include mixin.telefono{
+   
     }
+    
         a{
+            display: block;
+            text-align: center;
+            margin-bottom: 1rem;
             color: v.$blanco;
             font-size: 2.4rem;
             &:hover {
                 color: v.$amarillo;
             }   
+        }
+
+        @include mixin.tablet{
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+
+            a{
+                margin: 0 30px 0 0;
+            }
+
         }
     
         @include mixin.tablet{
