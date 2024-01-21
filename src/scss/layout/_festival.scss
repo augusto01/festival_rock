@@ -2,18 +2,28 @@
 @use '../base/mixins' as mixin;
 
 .sobre-festival{
-    display:grid ;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 2rem;
+    padding: 5rem 0;
+   @include mixin.tablet{
+    @include mixin.grid(2,5rem);
+    }
 }
-
 .contenido-festival{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 5rem;
+    margin-top: 5rem;
+    @include mixin.tablet{
+        margin-top: 0;
+    }
     h2{
-            
+        color: v.$negro;
+            margin-bottom: 2rem;
     }
 
     .fecha{
-
+        color: v.$rosa;
+        font-weight:700;
         
     }
 }
