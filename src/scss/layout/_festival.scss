@@ -1,0 +1,19 @@
+@use '../base/variable' as v; 
+@use '../base/mixins' as mixin;
+
+.sobre-festival{
+    display:grid ;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+}
+
+.contenido-festival{
+    h2{
+            
+    }
+
+    .fecha{
+
+        
+    }
+}
