@@ -27,3 +27,16 @@
         
     }
 }
+
+.galeria{
+    padding: 5rem 0;
+    h3{
+        text-align: center;
+        color: v.$blanco;
+    }
+}
+
+.galeria-imagenes{
+    @include mixin.resetear-lista;
+    @include mixin.grid(2,2rem);
+}

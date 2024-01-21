@@ -1,43 +1,31 @@
-function tarea(callback){
-    console.log("mi primer tarea");
-    callback();
-    
-}
-
-exports.primerTarea = tarea;
-
-//css
+const { src, dest, watch, parallel } = require("gulp");
 const plumber = require('gulp-plumber');
 const sass = require("gulp-sass")(require('sass'));
-const {src,dest, watch}= require("gulp");
-//src sirve para identificar algun archivo 
 
-//dest sirve para guardar dicho archivo
-//imagenes
-
-
-function css (callback){
-    // pasos para compilar el archivo SASS
-        //identificamos el archivo lo compliamos y lo almacenamos en el disco mediante pipes, los pipes permiten realizar acciones secuenciales!
-        src('src/scss/**/*.scss')
-            .pipe(plumber())       
-             //1 identificar el archivo sass
-            .pipe(sass())    
-            //2 compilarlo
-            .pipe(dest("build.css"));    //3 almacenarlo en el disco duro /ssd
-            
+// Tarea para compilar estilos CSS
+function css(callback) {
+    src('src/scss/**/*.scss')
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(dest("build/css"));  // Corregir la carpeta de destino a 'build/css'
     callback();
 }
 
-function dev (callback){
-    watch('src/scss/**/*.scss',css);
-    
+// Tarea para observar cambios y ejecutar la tarea css
+function dev(callback) {
+    watch('src/scss/**/*.scss', css);
+    watch('src/scss/js/**/*.js', javascript);  // Agregar esta línea para observar cambios en archivos JavaScript
     callback();
 }
 
+// Tarea para copiar archivos JavaScript
+function javascript(done) {
+    src('src/scss/js/**/*.js')
+        .pipe(dest("build/js"));
+    done();
+}
 
-
-
-exports.css= css;
-exports.dev = dev;
-
+// Exportar tareas
+exports.css = css;
+exports.js = javascript;
+exports.dev = parallel(dev,javascript);

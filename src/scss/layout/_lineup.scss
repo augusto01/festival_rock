@@ -67,7 +67,7 @@
 }
 
 .calendario{
-    @include mixin.restear-lista;
+    @include mixin.resetear-lista;
     li{
         padding: 2.5rem;
         font-weight: 700;
